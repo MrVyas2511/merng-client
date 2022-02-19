@@ -5,8 +5,7 @@ import App from './App'
     ApolloClient,
     InMemoryCache,
     ApolloProvider,
-    useQuery,
-    gql
+   
   } from "@apollo/client";
 import {setContext} from 'apollo-link-context'
 

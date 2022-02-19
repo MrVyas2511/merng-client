@@ -13,6 +13,7 @@ import Register from './pages/Register';
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 import UserProfile from './pages/UserProfile'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
             <Route exact path='/profile' element={<Profile />} />
             <Route exact path='profile/:userId' element={ <UserProfile/>}/>
 =
-      </Routes>
+          </Routes>
+          <Footer/>
       </div> 
       </Router>
       </AuthProvider>
