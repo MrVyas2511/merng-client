@@ -11,7 +11,7 @@ import App from './App'
 import {setContext} from 'apollo-link-context'
 
   const httpLink = createHttpLink({
-      uri : 'https://rocky-retreat-01477.herokuapp.com/'
+      uri : 'http://localhost:5000'
   })
   
   const authLink = setContext(() => {

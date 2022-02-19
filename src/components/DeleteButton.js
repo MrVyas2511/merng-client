@@ -40,8 +40,8 @@ export default function DeleteButton({postId,commentId,callback}) {
                 content={commentId ? "Delete Comment" : "Delete Post"}
                 inverted
                 trigger={
-                    <Button as='div' color='red' floated="right" onClick={() => setConfirmOpen(true)}>
-                        <Icon name="trash" style={{ margin: 0 }}></Icon>
+                    <Button as='div' basic size='mini' color='red' floated="right" onClick={() => setConfirmOpen(true)}>
+                        <Icon name="trash" color='red' style={{ margin: 0 }}></Icon>
                     </Button>
                 }
             />

@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client'
 import gql from 'graphql-tag'
 import { Button,Label,Icon,Popup } from 'semantic-ui-react';
 
-export default function ({user,post:{id,likes,likeCount}}) {
+export default function LikeButton({user,post:{id,likes,likeCount}}) {
     
     const [liked, setLiked] = useState(false);
     
@@ -19,16 +19,16 @@ export default function ({user,post:{id,likes,likeCount}}) {
     })
     const likeButton = user ? (
         liked ? (
-            <Button color='teal'>
+            <Button color='teal' size='mini'>
                 <Icon name="heart"/>
             </Button>
         ) : (
-            <Button color='teal' basic>
+            <Button color='teal' size='mini' basic>
             <Icon name="heart"/>
             </Button>
         )
     ) : (
-        <Button as={Link} to='/login' color='teal' basic>
+        <Button as={Link} to='/login' color='teal' size='mini' basic>
         <Icon name="heart"/>
         </Button>
             
@@ -38,7 +38,7 @@ export default function ({user,post:{id,likes,likeCount}}) {
             content={liked?"Unliked":"Liked"}
             inverted
             trigger={
-                <Button as="div" labelPosition="right" onClick={likePost}>
+                <Button as="div" labelPosition="right" size='mini'  onClick={likePost}>
                     {likeButton}
                     <Label basic color="teal" pointing="left">
                         {likeCount}

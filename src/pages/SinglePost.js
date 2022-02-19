@@ -78,8 +78,9 @@ export default function SinglePost(props) {
                                         <Button
                                             as="div"
                                             labelPosition="right"
+                                            size='mini'
                                             onClick={() => console.log("Comment")}>
-                                            <Button basic color='blue'>
+                                            <Button basic color='blue' size='mini'>
                                                 <Icon name="comments"></Icon>
                                             </Button>
                                             <Label basic color="blue" pointing="left">
@@ -95,7 +96,7 @@ export default function SinglePost(props) {
                         </Card>
 
                         {user && (
-                            <Card fluid>
+                            <Card fluid style={{width:'80%'}}>
                                 <Card.Content>
                                 <p>Post a comment</p>
                                 <Form>
@@ -121,7 +122,7 @@ export default function SinglePost(props) {
                         {comments.map(comment => (
                             <Card fluid key={comment.id}>
                                 <Card.Content>
-                                    {user && user.username == comment.username && (
+                                    {user && user.username === comment.username && (
                                         <DeleteButton postId={id} commentId={comment.id}/>
                                     )}
                                     <Card.Header>{comment.username}</Card.Header>
