@@ -19,7 +19,7 @@ export default function LikeButton({user,post:{id,likes,likeCount}}) {
     })
     const likeButton = user ? (
         liked ? (
-            <Button color='teal' size='mini'>
+            <Button color='blue' size='mini'>
                 <Icon name="heart"/>
             </Button>
         ) : (

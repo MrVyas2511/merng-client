@@ -14,9 +14,15 @@
     margin: auto;
 }
 
+.form-window{
+    margin-top: 50px !important;
+}
 #root{
-    background-color: aquamarine;
+    background-color: aliceblue;
     min-height: 100vh;
+}
+.window-wrapper{
+    min-height: 70vh;
 }
 
 .title{
@@ -36,3 +42,4 @@
     
     margin: auto;
 }
+

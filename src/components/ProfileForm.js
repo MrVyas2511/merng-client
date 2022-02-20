@@ -60,11 +60,12 @@ export default function FormExampleSubcomponentControl({ user: {id, username, em
           />
      
             <Form.TextArea label='About'
-                name="about"
-                value={values.about}
+          name="about"
+          style={{ height: "200px"}}
+              value={values.about}
               onChange={onChange}
               error={error?true:false}
-                placeholder='Tell us more about you...' />
+              placeholder='Tell us more about you...' />
          <Form.Button type='submit'>Submit</Form.Button>
       </Form>
     )

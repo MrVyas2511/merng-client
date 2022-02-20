@@ -20,7 +20,8 @@ function App() {
     <AuthProvider>
     <Router className="wrapper">
     <div className='ui container'>
-    <MenuBar/>
+          <MenuBar />
+          <div className='window-wrapper'>
       <Routes>
             <Route exact path='/' element={<Home />} /> 
             <Route exact path = '/login' element={<AuthRoute/>}>
@@ -34,8 +35,9 @@ function App() {
             <Route exact path='/profile' element={<Profile />} />
             <Route exact path='profile/:userId' element={ <UserProfile/>}/>
 =
-          </Routes>
-          <Footer/>
+            </Routes>
+            </div>
+        <Footer/>
       </div> 
       </Router>
       </AuthProvider>

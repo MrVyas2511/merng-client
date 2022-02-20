@@ -96,7 +96,7 @@ export default function SinglePost(props) {
                         </Card>
 
                         {user && (
-                            <Card fluid style={{width:'80%'}}>
+                            <Card fluid  >
                                 <Card.Content>
                                 <p>Post a comment</p>
                                 <Form>

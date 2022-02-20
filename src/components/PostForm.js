@@ -45,7 +45,7 @@ export default function PostForm() {
                         value={values.body}
                         error={error?true:false}
               />
-              <Button type="submit" color="teal">
+              <Button type="submit" color="blue">
                   Submit
             </Button>
         </Form.Field>
