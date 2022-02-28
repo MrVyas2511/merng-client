@@ -36,29 +36,26 @@ export default function Profile() {
       <Grid stackable columns={2}>
         <Grid.Row>
           <Grid.Column>
-      <div style={{ margin: '50px' }}>
-      
-      <Image
-          size='medium' circular
-          src="https://react.semantic-ui.com/images/avatar/large/steve.jpg"
-          />
+            <div style={{ margin: "50px" }}>
+              <Image size="medium" src={data.getUser.profilePhoto} />
               <h3>Username : {user.username}</h3>
-      <h3>About: {data.getUser.about}</h3>
-      <h3>Email : {data.getUser.email}</h3>
-      <h3>Gender:{data.getUser.gender}</h3>
-      <h3>CreatedAt : {moment(user.createdAt).format()}</h3> 
-           </div>
-        </Grid.Column>
-      
-        <Grid.Column >
-        <h2 className='form-window'>Profile Form</h2>
-      {edit && <ProfileForm user={user} setEdit={setEdit} edit></ProfileForm>}
-            {!edit && <Button onClick={() => setEdit(true)}>Edit</Button>}
-      </Grid.Column>
+              <h3>About: {data.getUser.about}</h3>
+              <h3>Email : {data.getUser.email}</h3>
+              <h3>Gender:{data.getUser.gender}</h3>
+              <h3>CreatedAt : {moment(user.createdAt).format()}</h3>
+            </div>
+          </Grid.Column>
 
+          <Grid.Column>
+            <h2 className="form-window">Profile Form</h2>
+            {edit && (
+              <ProfileForm user={user} setEdit={setEdit} edit></ProfileForm>
+            )}
+            {!edit && <Button onClick={() => setEdit(true)}>Edit</Button>}
+          </Grid.Column>
         </Grid.Row>
       </Grid>
-      </>
-  )
+    </>
+  );
 }
 

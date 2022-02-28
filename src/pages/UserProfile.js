@@ -12,7 +12,7 @@ function UserProfile() {
     const userId = params.userId;
      console.log(userId);
     const {loading, data } = useQuery(FETCH_POST_QUERY);
-
+    
     console.log(data);
     if (loading) return "Loading...";
 

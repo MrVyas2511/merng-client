@@ -18,15 +18,14 @@ function UserProfile({userId}) {
     console.log(data);
 
     return (
-        <Card
-        image='https://react.semantic-ui.com/images/avatar/large/steve.jpg'
+      <Card
+        image={data.getUser.profilePhoto}
         header={data.getUser.username}
         meta={data.getUser.gender}
         description={data.getUser.about}
         extra={data.getUser.email}
-        />        
-            
-   )
+      />
+    );
 }
 
 export default UserProfile

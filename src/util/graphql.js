@@ -24,14 +24,15 @@ export const FETCH_POST_QUERY = gql`
 
 
 export const FETCH_USER_QUERY = gql`
-query($userId:ID!){
-  getUser(userId:$userId){
-        id
-        username
-        email
-        gender
-        email
-        about
+  query ($userId: ID!) {
+    getUser(userId: $userId) {
+      id
+      username
+      email
+      gender
+      email
+      about
+      profilePhoto
+    }
   }
-}
-`
+`;
