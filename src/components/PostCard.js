@@ -35,7 +35,7 @@ function PostCard({
           src={
             data.getUser.profilePhoto
               ? data.getUser.profilePhoto
-              : "https://react.semantic-ui.com/images/avatar/large/steve.jpg"
+              : "https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"
           }
         />
         <Card.Header>{username}</Card.Header>
@@ -63,8 +63,7 @@ function PostCard({
               labelPosition="right"
               size="mini"
               as={Link}
-              to={`/posts/${id}`}
-            >
+              to={`/posts/${id}`}>
               <Button color="blue" basic size="mini">
                 <Icon name="comments" />
               </Button>
