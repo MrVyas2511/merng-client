@@ -40,7 +40,7 @@ function App() {
 
          <Footer/>
       </div> 
-      <Router/>
+      </Router>
       </AuthProvider>
   );
 }
